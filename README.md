@@ -1,24 +1,29 @@
-🔐 Phishing URL Detection System
+# 🚨 Phishing Link Detection System
 
-This project focuses on detecting malicious phishing links using machine learning techniques. Phishing attacks are one of the most common cybersecurity threats, where attackers trick users into revealing sensitive information through fake websites.
+A web-based application that detects potential phishing URLs by analyzing suspicious patterns and structures.
 
-The system analyzes URLs based on multiple features such as length, structure, domain characteristics, and suspicious patterns. Using these features, a trained model classifies whether a given URL is legitimate or phishing.
+## 🔍 Features
+- Detects phishing links using pattern-based analysis
+- Assigns risk levels with confidence scores
+- Explains why a URL is considered suspicious
+- Simple and interactive user interface
 
-This project aims to improve user safety by providing an automated and efficient way to identify potentially harmful links before users interact with them.
-
- 💡 Key Features
-- URL-based feature extraction
-- Machine learning classification model
-- Real-time phishing link detection
-- Lightweight and scalable solution
-- Easy integration with web applications
-
- 🛠️ Tech Stack
+## 🛠️ Tech Stack
 - HTML
 - CSS
 - JavaScript
 
-### 🎯 Use Cases
-- Browser security tools
-- Email filtering systems
-- Enterprise cybersecurity solutions
+## 💡 How It Works
+The system analyzes URLs based on:
+- Suspicious keywords (e.g., "login", "verify")
+- Abnormal URL structures
+- Presence of special characters or misleading domains
+
+Based on these factors, it calculates a risk score and provides an explanation.
+
+## 🚀 Future Improvements
+- Add machine learning for better accuracy
+- Improve UI/UX design
+- Add real-time API integration
+
+## 📸 Screenshots
