@@ -1,0 +1,43 @@
+/* CSS Document */
+body{
+background-color:#111;
+color:#FFFFFF;
+}
+
+.box{
+ background-color:#333333;
+ height:400x;
+ width:400px;
+ padding:70px;
+ position:absolute;
+ top:200px;
+ left:400px;
+ border-radius:10px;
+ margin:auto;
+ box-shadow:0 0 40px #0f0;
+ 
+ 
+
+}
+.txt{
+ text-align:center;
+
+ }
+ button{
+ background-color:#0000FF;
+ cursor:pointer;
+ color:#FFFFFF;
+ }
+ h2{
+ text-decoration:none;
+ font-weight:bold;
+ font-family:"Times New Roman", Times, serif;
+ 
+}
+textarea{
+color:#000000;
+}
+
+button:hover{
+background-color:#000099;
+}
