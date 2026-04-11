@@ -26,6 +26,9 @@ Based on these factors, it calculates a risk score and provides an explanation.
 - Improve UI/UX design
 - Add real-time API integration
 
+live demo:
+ https://susimitha20006.github.io/phishing-link-detection/
+
 ## 📸 Screenshots
 ![phishing](https://github.com/user-attachments/assets/cf4f0473-78c6-448c-989c-32773ab50e3b)
 
