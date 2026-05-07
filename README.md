@@ -1,34 +1,90 @@
-# 🚨 Phishing Link Detection System
+🛡️ AI Phishing URL Detector
+�
+AI-Powered Cybersecurity URL Detection System 
 
-A web-based application that detects potential phishing URLs by analyzing suspicious patterns and structures.
+🚀 Overview
+AI-powered phishing website detection system built using Python, Flask, and Machine Learning.
+This project analyzes URLs in real-time and predicts whether a website is:
+✅ Safe
+⚠️ Phishing
+using a trained Random Forest Classifier model.
+✨ Features
+✅ Real-time URL scanning
+✅ Machine Learning prediction
+✅ Confidence score
+✅ Dark cyber-security UI
+✅ URL history tracking
+✅ Fake brand detection
+✅ Export phishing reports
+✅ Live scanner animation
+✅ Responsive web application
+🧠 Machine Learning
+Model Used
+Random Forest Classifier
+Feature Engineering
+The model extracts features such as:
+URL length
+HTTPS usage
+Number of dots
+Suspicious keywords
+Digit-letter mixing
+IP address detection
+Fake brand similarity
+Special characters
+Subdomain analysis
+🛠️ Tech Stack
+Technology
+Usage
+Python
+Backend
+Flask
+Web Framework
+HTML/CSS
+Frontend
+Scikit-learn
+Machine Learning
+Pandas
+Data Processing
+Joblib
+Model Saving
+TLDExtract
+Domain Extraction
+📂 Project Structure
+AI-Phishing-Detector/
+├── app.py
+├── train_model.py
+├── phishing_model.pkl
+├── phishing.csv
+├── templates/
+│ └── index.html
+├── static/
+│ └── style.css
+└── README.md
+⚙️ Installation
+Clone Repository
+git clone https://github.com/your-username/AI-Phishing-Detector.git⁠�
+Install Requirements
+pip install flask pandas scikit-learn joblib tldextract python-Levenshtein
+▶️ Run Project
+Train Model
+python train_model.py
+Run Flask App
+python app.py
+📊 Sample Predictions
+<img width="1366" height="768" alt="Screenshot (72)" src="https://github.com/user-attachments/assets/5b145381-38f8-4175-a3ec-63c77b31ad04" />
 
-## 🔍 Features
-- Detects phishing links using pattern-based analysis
-- Assigns risk levels with confidence scores
-- Explains why a URL is considered suspicious
-- Simple and interactive user interface
-
-## 🛠️ Tech Stack
-- HTML
-- CSS
-- JavaScript
-
-## 💡 How It Works
-The system analyzes URLs based on:
-- Suspicious keywords (e.g., "login", "verify")
-- Abnormal URL structures
-- Presence of special characters or misleading domains
-
-Based on these factors, it calculates a risk score and provides an explanation.
-
-## 🚀 Future Improvements
-- Add machine learning for better accuracy
-- Improve UI/UX design
-- Add real-time API integration
-
-## 🚀 live demo
- https://susimitha20006.github.io/phishing-link-detection/
-
-## 📸 Screenshots
-![phishing](https://github.com/user-attachments/assets/cf4f0473-78c6-448c-989c-32773ab50e3b)
-
+🔮 Future Improvements
+Browser Extension
+Deep Learning Detection
+Real-time Threat API
+Email Phishing Detection
+Cloud Deployment
+👩‍💻 Author
+S Susimitha
+🎓 B.Tech Information Technology
+🔗 GitHub:
+https://github.com/susimitha20006⁠�
+🔗 LinkedIn:
+https://www.linkedin.com/in/susimitha-s-732487340⁠�
+⭐ Support
+If you like this project, give it a ⭐ on GitHub.
