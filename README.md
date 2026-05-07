@@ -81,9 +81,6 @@ AI-Phishing-Detector/
 ├── templates/  
 │ └── index.html  
 
-├── static/  
-│ └── style.css  
-
 └── README.md  
 
 ---
@@ -121,8 +118,9 @@ python app.py
 | g00gle-login.com | ⚠️ Phishing |
 | paypal-security-check.com | ⚠️ Phishing |
 
-<img width="1366" height="768" alt="Screenshot (72)" src="https://github.com/user-attachments/assets/11968395-dd9f-4a95-bd59-e87c0672569e" />
+<img width="1366" height="620" alt="image" src="https://github.com/user-attachments/assets/b2c7d3e2-0ca6-4447-88ef-6d543db3219b" />
 
+<img width="1366" height="618" alt="image" src="https://github.com/user-attachments/assets/e6487ae0-37d6-462d-b251-fb71cfb96afe" />
 
 
 ---
