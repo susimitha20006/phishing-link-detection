@@ -1,23 +1,281 @@
+<!-- =========================
+index.html
+========================= -->
+
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Phishing Detection</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Phishing URL Detector</title>
+
+    <style>
+
+        body{
+            background:#0d1117;
+            font-family:Arial;
+            color:white;
+            text-align:center;
+            padding-top:40px;
+        }
+
+        .container{
+            width:70%;
+            margin:auto;
+            background:#161b22;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 0 25px cyan;
+        }
+
+        h1{
+            color:cyan;
+            margin-bottom:30px;
+        }
+
+        input{
+            width:60%;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            background:#0d1117;
+            color:white;
+            border:1px solid cyan;
+            font-size:16px;
+        }
+
+        button{
+            padding:14px 24px;
+            border:none;
+            border-radius:10px;
+            background:cyan;
+            color:black;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+            margin-left:10px;
+        }
+
+        button:hover{
+            box-shadow:0 0 20px cyan;
+            transform:scale(1.05);
+        }
+
+        .result{
+            margin-top:30px;
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .safe{
+            color:#00ff99;
+        }
+
+        .phishing{
+            color:#ff4d4d;
+        }
+
+        .bar-container{
+            width:80%;
+            margin:auto;
+            background:#333;
+            border-radius:20px;
+            overflow:hidden;
+            margin-top:20px;
+        }
+
+        .bar{
+            height:30px;
+            line-height:30px;
+            color:white;
+            font-weight:bold;
+            background:linear-gradient(90deg,#00ff99,#00ccff);
+        }
+
+        .reasons{
+            margin-top:25px;
+            text-align:left;
+            width:60%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .reasons li{
+            margin-bottom:10px;
+            color:#ffcc00;
+        }
+
+        table{
+            width:100%;
+            margin-top:40px;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:cyan;
+            color:black;
+            padding:14px;
+        }
+
+        td{
+            padding:14px;
+            border:1px solid #333;
+        }
+
+        tr{
+            background:#1e2530;
+        }
+
+        .download-btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:14px 24px;
+            background:#00ff99;
+            color:black;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .download-btn:hover{
+            box-shadow:0 0 20px #00ff99;
+            transform:scale(1.05);
+        }
+
+        .scanner{
+            margin-top:25px;
+            height:5px;
+            background:cyan;
+            animation:scan 2s infinite;
+            border-radius:20px;
+        }
+
+        @keyframes scan{
+
+            0%{
+                width:0%;
+            }
+
+            50%{
+                width:100%;
+            }
+
+            100%{
+                width:0%;
+            }
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <div class="box">
-	<div class="txt">
-        <h2>PHISHING DETECTION SYSTEM</h2>
-		<br>
-        <form method="POST" action="check.php">
-            <textarea name="inputText" placeholder="Paste URL or message here..." required></textarea>
-			
-            <br>
-			<br>
-			
-            <button type="submit">Check</button>
+
+    <div class="container">
+
+        <h1>🛡 AI Phishing URL Detector</h1>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="url"
+                placeholder="Enter URL..."
+                required
+            >
+
+            <button type="submit">
+                Scan URL
+            </button>
+
         </form>
-		</div>
+
+        <div class="scanner"></div>
+
+        {% if result %}
+
+            <div class="result
+                {% if 'Safe' in result %}
+                    safe
+                {% else %}
+                    phishing
+                {% endif %}
+            ">
+
+                {{ result }}
+
+            </div>
+
+            <div class="bar-container">
+
+                <div
+                    class="bar"
+                    style="width:{{ confidence }}%;"
+                >
+
+                    {{ confidence }}%
+
+                </div>
+
+            </div>
+
+            {% if reasons %}
+
+                <div class="reasons">
+
+                    <h3>⚠ Risk Indicators</h3>
+
+                    <ul>
+
+                        {% for reason in reasons %}
+
+                            <li>{{ reason }}</li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </div>
+
+            {% endif %}
+
+            <a
+                href="/download_report"
+                class="download-btn"
+            >
+                ⬇ Download Cyber Report
+            </a>
+
+        {% endif %}
+
+        <h2 style="margin-top:50px;">
+            Recent URL Checks
+        </h2>
+
+        <table>
+
+            <tr>
+                <th>URL</th>
+                <th>Result</th>
+            </tr>
+
+            {% for item in history %}
+
+            <tr>
+
+                <td>{{ item.url }}</td>
+
+                <td>{{ item.result }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
     </div>
+
 </body>
+
 </html>
