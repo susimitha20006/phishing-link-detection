@@ -76,8 +76,7 @@ AI-Phishing-Detector/
 ├── app.py  
 ├── train_model.py  
 ├── phishing_model.pkl  
-├── phishing.csv  
-
+ 
 ├── templates/  
 │ └── index.html  
 
